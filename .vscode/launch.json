@@ -20,14 +20,29 @@
 				"--disable-extensions"
 			],
 			"outFiles": [
-                "${workspaceFolder}/dist/**/*.js"
-            ],
+				"${workspaceFolder}/dist/**/*.js"
+			],
 			"sourceMaps": true,
 			"smartStep": true,
 			"preLaunchTask": "npm: bundle-dev",
 			"env": {
-				"VSCODE_GO_IN_TEST": ""  // Enable code
+				"VSCODE_GO_IN_TEST": "" // Enable code
 			},
+		},
+		{
+			"name": "Launch Web Extension",
+			"type": "pwa-extensionHost",
+			"debugWebWorkerHost": true,
+			"request": "launch",
+			"args": [
+				"--extensionDevelopmentPath=${workspaceFolder}",
+				"--extensionDevelopmentKind=web",
+				"--disable-extensions"
+			],
+			"outFiles": [
+				"${workspaceFolder}/dist/**/*.js"
+			],
+			"preLaunchTask": "npm: bundle-web-dev"
 		},
 		{
 			"name": "Launch as server",

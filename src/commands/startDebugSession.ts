@@ -5,7 +5,7 @@
 
 import * as vscode from 'vscode';
 
-import { CommandFactory } from '.';
+import { CommandFactory } from './base';
 
 export const startDebugSession: CommandFactory = () => {
 	return (config: string | vscode.DebugConfiguration) => {

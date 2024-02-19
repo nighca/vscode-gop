@@ -14,7 +14,7 @@ import { extensionId } from './const';
 import { GoExtensionContext } from './context';
 import { extensionInfo } from './config';
 import { getFromGlobalState, updateGlobalState } from './stateUtils';
-import { createRegisterCommand } from './commands';
+import { createRegisterCommand } from './commands/base';
 
 export class WelcomePanel {
 	public static activate(ctx: vscode.ExtensionContext, goCtx: GoExtensionContext) {
