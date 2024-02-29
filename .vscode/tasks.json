@@ -66,6 +66,13 @@
 			"script": "bundle-dev",
 			"group": "build",
 			"problemMatcher": "$esbuild",
-		}
+		},
+		{
+      "type": "npm",
+      "script": "bundle-web-watch",
+      "group": "build",
+      "isBackground": true,
+      "problemMatcher": ["$ts-webpack-watch"]
+    }
 	]
 }

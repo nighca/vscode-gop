@@ -45,6 +45,21 @@
 			"preLaunchTask": "npm: bundle-web-dev"
 		},
 		{
+			"name": "Launch Web Extension (watch)",
+			"type": "pwa-extensionHost",
+			"debugWebWorkerHost": true,
+			"request": "launch",
+			"args": [
+				"--extensionDevelopmentPath=${workspaceFolder}",
+				"--extensionDevelopmentKind=web",
+				"--disable-extensions"
+			],
+			"outFiles": [
+				"${workspaceFolder}/dist/**/*.js"
+			],
+			"preLaunchTask": "npm: bundle-web-watch"
+		},
+		{
 			"name": "Launch as server",
 			"type": "node",
 			"request": "launch",
